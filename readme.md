@@ -43,13 +43,8 @@ Users should be able to:
 
 ### Links
 
-<<<<<<< HEAD
 - Solution URL: [github repo URL](https://your-solution-url.com)
 - Live Site URL: [live site URL](https://your-live-site-url.com)
-=======
-- Solution URL: [github repo URL](https://github.com/faozziyyah/weather-app)
-- Live Site URL: [live site URL](https://faozziyyah.github.io/weather-app/)
->>>>>>> 3e6997c1ff3ccd53e9c5ed50259b07882646655f
 
 ## My process
 

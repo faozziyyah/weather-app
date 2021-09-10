@@ -1,51 +1,22 @@
-//const key = '379dae2565c41addb6136328383b5ed0';
-
-/*const getCity = async (city) => {
-
-    const base = 'https://api.openweathermap.org/data/2.5/find';
-    const query = `?q=${city}&appid=${key}`;
-
-    const response = await fetch(base + query);
-    const data = await response.json();
-
-    return data[0];
-
-} 
-
-const getWeather = async (id, city ='') => {
-
-    const base = 'https://api.openweathermap.org/data/2.5/find';
-    let query = `?q=${id}&appid=${key}`;
-
-    if (city = '') {
-        query = `?q=${city}&appid=${key}`;
-    }
-
-    const response = await fetch(base + query);
-    const data = await response.json();
-
-    return data[0];
-
-
-} */
 
 const key = '379dae2565c41addb6136328383b5ed0';
 
   const getCity = async (city) => {
 
-    const base = 'https://api.openweathermap.org/data/2.5/find';
+    const base = 'https://api.openweathermap.org/data/2.5/weather';
     const query = `?q=${city}&appid=${key}&units=metric`;
 
     const response = await fetch(base + query);
     const data = await response.json();
 
-    return data.list[0];
+    return data;
 
 } 
 
 const cityForm = document.querySelector('form');
   const details = document.getElementById('details');
   const sunrise = document.getElementById('sunrise');
+  const sunset = document.getElementById('sunset');
   const wind = document.getElementById('wind');
   const humidity = document.getElementById('humidity');
   const visibility = document.getElementById('visibility');
@@ -84,9 +55,9 @@ const cityForm = document.querySelector('form');
       </span>
   `;
 
-  sunrise.innerHTML = `
+  sunset.innerHTML = `
       <span><h6 class="h-4">Sunset</h6>
-          <p class="p-1">${weather.sys.sunset}</p>
+      <p class="p-1">${new Date(parseInt (weather.sys.sunset, 10) * 1000).toGMTString()}</p>
       </span>
   `;
 
@@ -102,7 +73,7 @@ const cityForm = document.querySelector('form');
 
   visibility.innerHTML = `
       <h6 class="h-5">Description</h6>  
-      <p class="p-2">${weather.weather[0].description}</p> <span>currently</span>
+      <p class="p-2">${weather.weather[0].description}</p><span>Currently</span>
   `;
 
   description.innerHTML = ` 
@@ -113,10 +84,7 @@ const cityForm = document.querySelector('form');
       <h6 class="h-5">Air Pressure</h6>  
       <p class="p-2">${weather.main.pressure}</p> <span>mb</span>
   `;
-
-  //update day or night images
   
-
    //remove the display none if present
    if (conditions.classList.contains('d-none')) {
        conditions.classList.remove('d-none');
@@ -141,3 +109,20 @@ cityForm.addEventListener('submit', e => {
     .catch(err => console.log(err));
 
   });
+
+  /*const getWeather = async (id, city ='') => {
+
+    const base = 'https://api.openweathermap.org/data/2.5/find';
+    let query = `?q=${id}&appid=${key}`;
+
+    if (city = '') {
+        query = `?q=${city}&appid=${key}`;
+    }
+
+    const response = await fetch(base + query);
+    const data = await response.json();
+
+    return data[0];
+
+
+} */

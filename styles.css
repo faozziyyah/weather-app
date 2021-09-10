@@ -18,6 +18,7 @@ aside {
     align-items: center;
     text-align: center;
     border-top-left-radius: 8px;
+    padding-bottom: 1.5em;
 }
 
 form {
@@ -52,6 +53,26 @@ input {
 
 .d-none{
     display: none;
+}
+
+.h-4{
+    font-size: 15px;
+}
+
+.p-1{
+    margin-top: -1.5em;
+}
+
+#weatherIcon{
+    width: 40%;
+}
+
+#details{
+    margin-top: -1em;
+}
+
+#sunset{
+    margin-top: -1em;
 }
 
 ion-icon{

@@ -155,8 +155,4 @@ const updateCity = async (city ) => {
 - Daud Faozziyyah 
 
 ### Headshot
-<<<<<<< HEAD
-![](img/headshot.jpg)
-=======
-![](img/headshot.jpg)
->>>>>>> 3e6997c1ff3ccd53e9c5ed50259b07882646655f
+![](img/headshot.jpg | width=50)

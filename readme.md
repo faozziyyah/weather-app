@@ -155,4 +155,4 @@ const updateCity = async (city ) => {
 - Daud Faozziyyah 
 
 ### Headshot
-![](img/headshot.jpg | width=50)
+<img src="img/headshot.jpg" width="50" height="50">
